@@ -5,7 +5,7 @@ import {Navbar} from "@/components/Navbar"
 import { Process } from "@/components/Process"
 import { Project } from "@/components/Project"
 import { Social } from "@/components/Social"
-import { TechWall } from "@/components/TechWall"
+// import { TechWall } from "@/components/StackWall"
 import { Testimonial } from "@/components/Testimonial"
 
 const page = () => {
@@ -13,7 +13,7 @@ const page = () => {
     <div>
       <Navbar />
       <Header />
-      <TechWall />
+      {/* <TechWall /> */}
       <Process />
       <Project />
       <Testimonial />

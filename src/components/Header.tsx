@@ -1,6 +1,7 @@
 import Image from "next/image";
 import star from "../../public/svgs/star.svg";
 import Link from "next/link";
+import { StackWall } from "./StackWall";
 
 export const Header = () => {
   return (
@@ -27,13 +28,13 @@ export const Header = () => {
       </div>
 
       {/* ///////////////////////////////// */}
-      <div className="flex flex-col px-[37px] py-[35px] items-center justify-center text-center h-[40vh] g-red-400 gap-[2.6rem]">
-        <h1 className="text-[25px] font-semibold">I Design & Build Clean Websites</h1>
+      <div className="flex flex-col px-[37px] py-[35px] items-center justify-center text-center h-[35vh] g-red-400 gap-[.6rem]">
+        <h1 className="text-[35px] leading-none font-semibold">I Design & Build Clean Websites!</h1>
         <p className="text-[15px]  text-center flex items-center">
           Write anything here something about yourself to showcase what actually
           you doing or targeting etc.
         </p>
-        <Link href="/contact" className="bg-white px-[15px] py-[10px] rounded-[25px] ">Hire Me</Link>
+        <Link href="/contact" className="bg-white text-black px-[25px] py-[10px] rounded-[25px] ">Hire Me</Link>
       </div>
       {/* ///////////////////////////////// */}
 
@@ -59,7 +60,7 @@ export const Header = () => {
         />
       </div>
 
-      <div className="relative border-white/20 border-t-[1px] border-b-[0px] h-[55px] w-[100%] bg-transparent flex items-start">
+      <div className="relative g-red-600 border-white/20 border-t-[1px] border-b-[0px] h-[55px] w-[100%] bg-transparent flex items-start">
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
@@ -70,6 +71,9 @@ export const Header = () => {
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
       </div>
+
+
+      <StackWall />
     </header>
   );
 };
