@@ -17,10 +17,13 @@ export const Navbar = () => {
   return (
     <nav className="p-[22.5px]">
       <div className="flex items-center justify-between">
-        <div className="logo flex justify-center items-center">
+        <a href="/" className="logo flex justify-center items-center">
+          <Image src={adexbam} width={30} height={30} alt="Adexbam" />
+        </a>
+        {/* <div className="logo flex justify-center items-center">
           <Image src={adexbam} width={30} height={30} alt="Adexbam" />
           <p>adexbam</p>
-        </div>
+        </div> */}
 
         <div className="menu">
           <div className="h-[38px] pl-[4.53px] pr-1 py-[4.53px] bg-transparent rounded-[218.97px] border border-[#7986fb] justify-center items-center gap-[30.20px] inline-flex">
