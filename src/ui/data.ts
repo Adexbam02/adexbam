@@ -38,18 +38,48 @@ export const projects = [
     id: 1,
     img: greatAspiration,
     title: "Great Aspration",
-    context: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, obcaecati."
+    context:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, obcaecati.",
   },
   {
     id: 2,
     img: greatAspiration,
     title: "Great Aspration",
-    context: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, obcaecati."
+    context:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, obcaecati.",
   },
   {
     id: 3,
     img: greatAspiration,
     title: "Great Aspration",
-    context: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, obcaecati."
+    context:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, obcaecati.",
+  },
+];
+
+export const testimonial = [
+  {
+    id: 1,
+    profile: greatAspiration,
+    name: "Nrad jhfnd",
+    title: "xcvbnm bnm",
+    context:
+      "s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the",
+  },
+  {
+    id: 2,
+    profile: greatAspiration,
+    name: "Nrad jhfnd",
+    title: "xcvbnm bnm",
+    context:
+      "s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the",
+  },
+  {
+    id: 3,
+    profile: greatAspiration,
+    name: "Nrad jhfnd",
+    title: "xcvbnm bnm",
+    context:
+      "s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the",
   },
 ];
