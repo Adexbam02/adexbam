@@ -5,7 +5,7 @@ import { StackWall } from "./StackWall";
 
 export const Header = () => {
   return (
-    <header className="mt-[2rem] mb-[2rem] sm:mt-[.1rem] md:bg-red-400">
+    <header className="mt-[2rem] mb-[2rem] sm:mt-[.1rem] sm:bg-ed-400">
       <div className="relative border-white/20 border-t-[1px] border-b-[1px] h-[55px] w-[100%] bg-transparent flex items-start">
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>

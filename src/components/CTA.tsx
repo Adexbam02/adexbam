@@ -22,11 +22,11 @@ export const CTA = () => {
 
   return (
     <section className="mt-[3.3rem] px-[23px] relative">
-      <div>
+      <div className="px-[22.3px]  flex-col py-[3rem] md:ctaBg">
         <Title title="Have Idea about Project?" />
 
-        <div className="flex flex-col items-start justify-start gap-[1rem]">
-          <p className="md:max-w-[70%]">
+        <div className="flex flex-col items-start justify-start gap-[1rem] md:iems-center md: ustify-center">
+          <p className="md:max-w-[50%] md:text-cnter md:text-[px]">
             Write anything here something about yourself to showcase what
             actually you doing or targeting etc.
           </p>

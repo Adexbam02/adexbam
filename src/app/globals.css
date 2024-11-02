@@ -22,6 +22,8 @@ body {
   /* overflow: hidden; */
 }
 
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -41,6 +43,12 @@ body {
 
   .flexCenter{
     @apply flex items-center justify-center;
+  }
+
+  .ctaBg {
+    @apply bg-no-repeat bg-center;
+    background-image: url("../../public/svgs/CTA.svg");
+    background-position: 100% 50%;
   }
 }
 

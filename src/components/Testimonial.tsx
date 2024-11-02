@@ -9,11 +9,11 @@ export const Testimonial = () => {
       <div>
         <Title title="Client Testimonials" />
 
-        <div className="p-[15px] flex flex-col items-center justify-center gap-[1.5rem]">
+        <div className="p-[15px] flex flex-col items-center justify-center gap-[1.5rem] md:gap-[.5rem] md:grid md:grid-cols-2">
           {testimonial.map(({ id, profile, name, title, context }) => (
             <div
               key={id}
-              className="flex flex-col items-center justify-center p-[15px] rounded-[15px] border-[.0px] gradient-border gap-2"
+              className="flex flex-col items-center justify-center p-[15px] rounded-[15px] border-[.0px] gradient-border gap-2 md:w-[]"
             >
               <div className="flex items-center justify-between w-[100%]">
                 <div className="flex items-center justify-between  gap-3">
