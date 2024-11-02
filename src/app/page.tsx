@@ -1,6 +1,6 @@
 import { Footer } from "@/components/Footer"
 import {Header} from "@/components/Header"
-import { Message } from "@/components/Message"
+import { CTA } from "@/components/CTA"
 import {Navbar} from "@/components/Navbar"
 import { Process } from "@/components/Process"
 import { Project } from "@/components/Project"
@@ -17,7 +17,7 @@ const page = () => {
       <Process />
       <Project />
       <Testimonial />
-      <Message />
+      <CTA />
       <Social />
       <Footer />
     </div>

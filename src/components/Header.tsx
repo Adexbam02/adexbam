@@ -5,7 +5,7 @@ import { StackWall } from "./StackWall";
 
 export const Header = () => {
   return (
-    <header className="mt-[2rem] mb-[2rem]">
+    <header className="mt-[2rem] mb-[2rem] sm:mt-[.1rem] md:bg-red-400">
       <div className="relative border-white/20 border-t-[1px] border-b-[1px] h-[55px] w-[100%] bg-transparent flex items-start">
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
@@ -16,30 +16,30 @@ export const Header = () => {
           width={20}
           height={20}
           alt="star"
-          className="absolute top-[80%] left-[23%]"
+          className="absolute top-[80%] left-[23%] sm:left-[23.5%]"
         />
         <Image
           src={star}
           width={20}
           height={20}
           alt="star"
-          className="absolute top-[80%] left-[73%]"
+          className="absolute top-[80%] left-[73%] sm:left-[73.4%]"
         />
       </div>
 
       {/* ///////////////////////////////// */}
-      <div className="flex flex-col px-[37px] py-[35px] items-center justify-center text-center h-[35vh] g-red-400 gap-[.6rem]">
+      <div className="mt-[1rem] flex flex-col px-[37px] py-[30px] items-center justify-center text-center h-[30vh] g-red-400 gap-[.6rem]">
         <h1 className="text-[35px] leading-none font-semibold">I Design & Build Clean Websites!</h1>
         <p className="text-[15px]  text-center flex items-center">
           Write anything here something about yourself to showcase what actually
           you doing or targeting etc.
         </p>
-        <Link href="/contact" className="bg-white text-black px-[25px] py-[10px] rounded-[25px] ">Hire Me</Link>
+        <Link href="/contact" className="font-medium bg-gradient-to-r from-[#7A87FB] to-[#FFD49C] text-black px-[35px] py-[10px] rounded-[25px] ">Hire Me</Link>
       </div>
       {/* ///////////////////////////////// */}
 
 
-      <div className="relative border-white/20 border-t-[0px] border-b-[0px] h-[55px] w-[100%] bg-transparent flex items-start">
+      <div className="relative border-white/20 border-t-[0px] b-red-500 border-b-[0px] h-[55px] w-[100%] bg-transparent flex items-start">
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[0px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
@@ -49,14 +49,14 @@ export const Header = () => {
           width={20}
           height={20}
           alt="star"
-          className="absolute top-[80%] left-[23%]"
+          className="absolute top-[80%] left-[23%] sm:left-[23.5%]"
         />
         <Image
           src={star}
           width={20}
           height={20}
           alt="star"
-          className="absolute top-[80%] left-[73%]"
+          className="absolute top-[80%] left-[73%] sm:left-[73.4%]"
         />
       </div>
 

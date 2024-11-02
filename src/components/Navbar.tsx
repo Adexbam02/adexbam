@@ -26,12 +26,12 @@ export const Navbar = () => {
         </div> */}
 
         <div className="menu">
-          <div className="h-[38px] pl-[4.53px] pr-1 py-[4.53px] bg-transparent rounded-[218.97px] border border-[#7986fb] justify-center items-center gap-[30.20px] inline-flex">
-            <div className="cursor-pointer px-[12.08px] py-1.5 bg-[#282828] rounded-[30.20px] justify-center items-center gap-[4.53px] flex">
+          <div className="h-[38px] w-[38px]  p-[3px] bg-transparent rounded-full border border-[normalGradient] flex justify-center items-center">
+            <div className="cursor-pointer p-1.5 bg-[#282828] rounded-full justify-center items-center w-[100%] flex">
               <Image
                 src={isMenuOpen ? close : open}
-                width={20}
-                height={20}
+                width={30}
+                height={30}
                 alt="Adexbam"
                 onClick={toggleMenu}
               />

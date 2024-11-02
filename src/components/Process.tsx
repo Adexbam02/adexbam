@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {process} from "../ui/data";
+import { process } from "../ui/data";
 import { Title } from "@/ui/Title";
 export const Process = () => {
   return (
     <section className="mt-[3.3rem] px-[23px] fex items-center justify-between">
-
-      <Title title="My Process to Design"/>
+      <Title title="My Process to Design" />
 
       <div className="content">
         <div className="flex flex-col items-center justify-center gap-[2rem]">
@@ -28,12 +27,10 @@ export const Process = () => {
 
                 <h3 className="text-[20px] uppercase">{title}</h3>
 
-                <p className="min-w-[200px]">
-                  {content}
-                </p>
+                <p className="min-w-[200px] sm:max-w-[90%]">{content}</p>
 
                 <Link
-                  className="px-[15px] py-[7px] rounded-[25px] border-[0.4px] border-white"
+                  className="px-[15px] py-[7px] rounded-[25px] border-[0.4px] border-white hover:normalGradient hover:text-black ease-out transition-all transitin-colors duration-200"
                   href={link}
                 >
                   See Examples

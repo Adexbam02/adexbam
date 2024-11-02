@@ -18,6 +18,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  /* overflow: hidden; */
 }
 
 @layer utilities {
@@ -28,9 +30,47 @@ body {
   section {
     @apply pl-[22.5px];
   }
+
+  input, textarea{
+    @apply outline-none text-black w-[100%] p-2 rounded-[4px] resize-none;
+  }
+
+  .normalGradient{
+    @apply bg-gradient-to-r from-[#7A87FB] to-[#FFD49C];
+  }
+
+  .flexCenter{
+    @apply flex items-center justify-center;
+  }
 }
 
 
-@layer utilities {
-  
+/* styles/globals.css */
+.gradient-border {
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  /* background: linear-gradient(to right, #7A87FB 50%, #FFD49C 45%, rgba(255, 212, 156, 0.5) 50%, rgba(255, 212, 156, 0.25) 55%, transparent 60%); */
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.gradient-border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #282828; /* Adjust this to match your background color */
+  z-index: -1;
+  border-radius: inherit;
 }

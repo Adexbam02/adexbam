@@ -12,7 +12,7 @@ export const StackWall = () => {
         width={30}
         height={20}
         alt="star"
-        className="grayscale cursor-pointer transition-all hover:grayscale-0"
+        className="grayscale cursor-pointer transition-all hover:grayscale-0 sm:w-[35px]"
       />
       ))
     }

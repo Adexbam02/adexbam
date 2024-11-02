@@ -2,6 +2,10 @@ import processOne from "../../public/svgs/first.svg";
 import processTwo from "../../public/svgs/second.svg";
 import processThree from "../../public/svgs/third.svg";
 import greatAspiration from "../../public/Great-Aspiration.png";
+import x from "../../public/svgs/x.svg"
+import dribble from "../../public/svgs/dribble.svg"
+import insta from "../../public/svgs/instagram.svg"
+import facebook from "../../public/svgs/facebook.svg"
 
 export const process = [
   {
@@ -83,3 +87,27 @@ export const testimonial = [
       "s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the",
   },
 ];
+
+
+export const social = [
+  {
+    id: 1,
+    img: x,
+    link: "/"
+  },
+  {
+    id: 2,
+    img: dribble,
+    link: "/"
+  },
+  {
+    id: 3,
+    img: insta,
+    link: "/"
+  },
+  {
+    id: 2,
+    img: facebook,
+    link: "/"
+  }
+]
