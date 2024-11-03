@@ -18,16 +18,16 @@ export const Project = () => {
   };
 
   return (
-    <section className="mt-[3.3rem] px-[23px]">
+    <section className="mt-[3.3rem] px-[23px] md:px-[60px] lg:px-[9rem]">
       <div className="md:flex items-center justify-center">
         <div className="">
           <Title title="Some Featured Projects" />
 
-          <div className="flex flex-col items-start justify-normal gap-[1rem] sm:p-[20px] md:flex-rw md:flex-wrap">
+          <div className="flex flex-col items-start justify-normal gap-[1rem] sm:p-[20px] md:p-0 md:flex-wrap  lg:grid lg:grid-cols-3 lg:gap-4 ">
             {projects.map(({ id, img, title, context }) => (
               <div
                 key={id}
-                className="bg-[#151515] rounded-[5px] p-[25px] flex flex-col items-start justify-start gap-[1rem] md:flex-row  "
+                className="bg-[#151515] rounded-[5px] p-[25px] flex flex-col items-start justify-start gap-[1rem] md:flex-row  lg:w-[100%] lg:flex-col lg:gap-[1.5rem]  "
               >
                 <a
                   href="/"
@@ -57,14 +57,14 @@ export const Project = () => {
                     src={img}
                     width={100}
                     height={100}
-                    className="w-[100%]"
+                    className="w-[100%] "
                     alt=""
                   />
                 </a>
                 <span className="flex flex-col items-start">
                   <a
                     href="/"
-                    className="text-[20px] font-semibold hover:underline transition-all md:text-[30px] md:font-medium"
+                    className="text-[20px] font-normal hover:underline transition-all md:text-[30px] md:font-medium lg:font-normal lg:text-[28px]"
                   >
                     {title}
                   </a>

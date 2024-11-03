@@ -21,8 +21,8 @@ export const CTA = () => {
   // const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data)
 
   return (
-    <section className="mt-[3.3rem] px-[23px] relative">
-      <div className="px-[22.3px]  flex-col py-[3rem] md:ctaBg">
+    <section className="mt-[3.3rem] px-[23px] md:px-[60px] relative  lg:px-[9rem]">
+      <div className="px-[22.3px] md:px-0  flex-col md:py-[3rem] md:ctaBg">
         <Title title="Have Idea about Project?" />
 
         <div className="flex flex-col items-start justify-start gap-[1rem] md:iems-center md: ustify-center">

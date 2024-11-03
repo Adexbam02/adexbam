@@ -17,7 +17,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="p-[22.5px] fixd w-[100%] z-[100] ">
+    <nav className="p-[22.5px] fixd w-[100%] z-[100] md:px-[60px] lg:px-[9rem]">
       <div className="flex items-center justify-between">
         <a href="/" className="logo flex justify-center items-center">
           <Image src={adexbam} width={30} height={30} alt="Adexbam" />

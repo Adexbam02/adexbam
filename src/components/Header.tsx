@@ -5,8 +5,8 @@ import { StackWall } from "./StackWall";
 
 export const Header = () => {
   return (
-    <header className="mt-[2rem] mb-[2rem] sm:mt-[.1rem] sm:bg-ed-400">
-      <div className="relative border-white/20 border-t-[1px] border-b-[1px] h-[55px] w-[100%] bg-transparent flex items-start">
+    <header className="mt-[.1rem] mb-[2rem] sm:mt-[.1rem] sm:bg-ed-400 md:px-[60px] lg:px-[9rem]">
+      <div className="bg-re relative border-white/20 border-t-[1px] border-b-[1px] h-[55px] w-[100%] bg-transparent flex items-start">
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
@@ -29,8 +29,8 @@ export const Header = () => {
 
       {/* ///////////////////////////////// */}
       <div className="mt-[1rem] flex flex-col px-[37px] py-[30px] items-center justify-center text-center h-[30vh] g-red-400 gap-[.6rem]">
-        <h1 className="text-[35px] leading-none font-semibold">I Design & Build Clean Websites!</h1>
-        <p className="text-[15px]  text-center flex items-center">
+        <h1 className="text-[35px] leading-none font-semibold lg:text-[45px]">I Design & Build Clean Websites!</h1>
+        <p className="text-[15px]  text-center flex items-center lg:text-[20px] lg:w-[70%]">
           Write anything here something about yourself to showcase what actually
           you doing or targeting etc.
         </p>

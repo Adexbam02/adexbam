@@ -5,11 +5,11 @@ import mark from "../../public/svgs/mark.svg";
 import { testimonial } from "@/ui/data";
 export const Testimonial = () => {
   return (
-    <section className="mt-[3.3rem] px-[23px]">
+    <section className="mt-[3.3rem] px-[23px] md:px-[60px]  lg:px-[9rem]">
       <div>
         <Title title="Client Testimonials" />
 
-        <div className="p-[15px] flex flex-col items-center justify-center gap-[1.5rem] md:gap-[.5rem] md:grid md:grid-cols-2">
+        <div className="-[15px] md:p-0 flex flex-col items-center justify-center gap-[1.5rem] md:gap-[.5rem] md:grid md:grid-cols-2">
           {testimonial.map(({ id, profile, name, title, context }) => (
             <div
               key={id}
