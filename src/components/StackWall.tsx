@@ -3,7 +3,7 @@ import stackk from "../../public/svgs/stacks/stack";
 
 export const StackWall = () => {
   return (
-    <div className="px-[22.5px] py-[35px] relative border-white/20 border-t-[0px] border-b-[1px] h-[55px] w-[100%] bg-transparent flex items-center justify-between">
+    <div className="px-[22.5px] py-[35px] relative border-white/20 border-t-[0px] border-b-[1px] md:border-x-[1px] h-[55px] w-[100%] bg-transparent flex items-center justify-between">
     {
       stackk.map(({id, img}) => (
         <Image
