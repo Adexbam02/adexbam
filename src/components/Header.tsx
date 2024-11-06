@@ -8,15 +8,45 @@ import { StackWall } from "./StackWall";
 // import { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Observer } from "gsap/Observer";
+
+gsap.registerPlugin(Observer);
+
+import { useEffect } from "react";
+
 import { HorizontalBoxOne } from "@/ui/HorizontalBoxOne";
 import { HorizontalBoxTwo } from "@/ui/HorizontalBoxTwo";
 import { HorizontalBoxThree } from "@/ui/HorizontalBoxThree";
 import { HorizontalBoxFour } from "@/ui/HorizontalBoxFour";
 
-
 // import { motion, useScroll } from "framer-motion";
 
 export const Header = () => {
+  const onHoverIn = () => {
+    console.log("hoverIn");
+  };
+
+  const onHoverOut = () => {
+    console.log("hoverOut");
+  };
+  // useEffect(() => {
+  //   Observer.create({
+  //     target: "#idd",
+  //     onHover: () => {
+
+  //     },
+  //   });
+  // }, []);
+
+  // useEffect(() => {
+  //   Observer.create({
+  //     target: "#idd",
+  //     onHover: () => {
+  //       console.log("hoverOut");
+  //     },
+  //   });
+  // }, []);
+
   useGSAP(() => {
     const timeline = gsap.timeline();
 
@@ -50,10 +80,8 @@ export const Header = () => {
     // });
   });
 
-
   return (
     <header className="mt-[.1rem] mb-[2rem] sm:mt-[.1rem] sm:bg-ed-400 md:px-[60px] lg:px-[9rem]">
-      
       <HorizontalBoxOne />
 
       {/* ///////////////////////////////// */}
@@ -71,10 +99,15 @@ export const Header = () => {
           Write anything here something about yourself to showcase what actually
           you doing or targeting etc.
         </p>
+
         <Link
           id="headBtn"
+          onMouseEnter={onHoverIn}
+          onMouseLeave={onHoverOut}
           href="/contact"
-          className="opacity-0 font-medium bg-transparent hover:bg-gradient-to-r from-[#7A87FB] to-[#FFD49C] transition-all duration-6000 ease-in-out border-[1px] border-gray-200 text-white px-[35px] py-[10px] rounded-[25px]"
+          className="opacity-0 font-medium bg-transparent gradientBorder 
+          transition-all duration-6000 ease-in-out 
+          box-borde rounded-[25px] border-[2px] text-white px-[35px] py-[10px] "
         >
           Hire Me
         </Link>
@@ -84,7 +117,7 @@ export const Header = () => {
 
       <HorizontalBoxFour />
 
-      <HorizontalBoxTwo /> 
+      <HorizontalBoxTwo />
 
       <HorizontalBoxThree />
 
