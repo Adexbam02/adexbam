@@ -6,7 +6,18 @@ import { Title } from "@/ui/Title";
 import click from "../../public/svgs/click.svg";
 import { projects } from "@/ui/data";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
+
 export const Project = () => {
+  ScrollTrigger.create({
+    
+    trigger: "#id",
+    start: "top top",
+    end: "bottom 50%+=100px",
+    onEnter: () => console.log('enter')
+  });
   const [hoveredId, setHoveredId] = useState(null);
 
   const handleHoverIn = (id) => {
@@ -73,6 +84,7 @@ export const Project = () => {
               </div>
             ))}
           </div>
+          <h1 id="id">Hover over me</h1>
         </div>
       </div>
     </section>

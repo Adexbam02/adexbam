@@ -17,17 +17,26 @@ import { Observer } from "gsap/Observer";
 gsap.registerPlugin(Observer);
 
 export const Navbar = () => {
-  useEffect(() => {
-    Observer.create({
-      target: "#id",
-
-      onHover: () => {},
-    });
-  }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    Observer.create({
+      // target: "#id",
+      // onHover: (self: Observer) => {
+      //   const target = self.target as HTMLAnchorElement;
+      //   const timeline = gsap.timeline();
+      //   timeline.to(target, { y: -6, duration: 0.5, delay: 0.5 });
+      // },
+    });
+  }, []);
+
+  
   const mouseHoverIn = () => {
-    // console.log("IN");
+    console.log("IN");
 
     const timeline = gsap.timeline();
 
@@ -46,24 +55,46 @@ export const Navbar = () => {
     timeline.to("#dexbam", { opacity: 0, x: -15, duration: 0.7 });
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const mouseHoverInNavItems = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = event.currentTarget;
+    const timeline = gsap.timeline();
+
+    timeline.to(target, { y: -4, duration: 0.3, delay: 0.5 });
+
+    const allElements = document.querySelectorAll("#navItems");
+
+    allElements.forEach((element) => {
+      if (element !== target) {
+        // console.log("sdf")
+        gsap.to(element, { opacity: 0.3, duration: 0.3 });
+      }
+    });
   };
 
-  // useGSAP(() => {
-  //   const timeline = gsap.timeline();
+  const mouseHoverOutNavItems = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = event.currentTarget;
+    const timeline = gsap.timeline();
 
-  //   timeline.fromTo(
-  //     "#dexbam",
-  //     { opacity: 0, y: -30 },
-  //     { opacity: 1, y: 0, duration: 0.5, delay: 0.5 }
-  //   );
-  // });
+    timeline.to(target, { y: 0, duration: 0.3 });
+
+    const allElements = document.querySelectorAll("#navItems");
+
+    allElements.forEach((element) => {
+      if (element !== target) {
+        // console.log("qwerg")
+        gsap.to(element, { opacity: 1, duration: 0.3 });
+      }
+    });
+  };
+
+
+
+  
 
   return (
     <nav className="p-[22.5px] fixd w-[100%] z-[100] md:px-[60px] lg:px-[9rem]">
       <div className="flex items-center justify-between">
-        <div className="logo flex justify-end items-center">
+        <div className="logo flex justify-end items-center select-none">
           <a
             href="/"
             className="relative z-50"
@@ -95,9 +126,33 @@ export const Navbar = () => {
           >
             <Image src={home} width={25} height={25} alt="Home" />
           </a>
-          <a href="/">About</a>
-          <a href="/">Projects</a>
-          <a href="/">Contact Me</a>
+          <a
+            href="/"
+            id="navItems"
+            onMouseEnter={mouseHoverInNavItems}
+            onMouseLeave={mouseHoverOutNavItems}
+            className="opacity-"
+          >
+            About
+          </a>
+          <a
+            href="/"
+            id="navItems"
+            onMouseEnter={mouseHoverInNavItems}
+            onMouseLeave={mouseHoverOutNavItems}
+            className="opacity-"
+          >
+            Projects
+          </a>
+          <a
+            href="/"
+            id="navItems"
+            onMouseEnter={mouseHoverInNavItems}
+            onMouseLeave={mouseHoverOutNavItems}
+            className="opacity-"
+          >
+            Contact Me
+          </a>
         </div>
 
         <div className="menu md:hidden">

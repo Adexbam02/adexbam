@@ -9,20 +9,30 @@ import { process } from "../ui/data";
 import { Title } from "@/ui/Title";
 
 import gsap from "gsap";
-import { Observer } from "gsap/Observer"; 
+import { Observer } from "gsap/Observer";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(Observer); // Register the Observer plugin
+gsap.registerPlugin(ScrollTrigger)
 
 export const Process = () => {
+  // ScrollTrigger.create({
+    
+  //   trigger: "#id",
+  //   start: "top top",
+  //   end: "bottom 50%+=100px",
+  //   onEnter: () => console.log('enter')
+  // });
+
   useEffect(() => {
     Observer.create({
       target: "#id",
-      onHover: () => {
+      onChangeX: () => {
         console.log("Hover");
 
-        const timeline = gsap.timeline()
+        const timeline = gsap.timeline();
 
-        timeline.to("#id", {x: -20})
+        timeline.to("#id", { x: -20 });
       },
     });
   }, []);
@@ -32,10 +42,12 @@ export const Process = () => {
       <div className="md:flex items-start justify-center flex-col gap-2 md:w-[100%]">
         <Title title="My Process to Design" />
         <h1 id="id">Hover over me</h1>
-        <div className="flex flex-col items-start bg-reen-300 justify-center gap-[2rem] md:[100%]">
+        <div
+          id="#idd"
+          className="flex flex-col items-start bg-reen-300 justify-center gap-[2rem] md:[100%]"
+        >
           {process.map(({ id, number, img, title, content, link }) => (
             <div
-              // id={String(id)}
               key={id}
               className="flex items-start justify-between gap-4 bg-rd-500 md:w-[90%]"
             >

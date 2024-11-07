@@ -3,7 +3,7 @@
 
 export const HorizontalBoxFour = () => {
   return (
-    <div className="bg-re relative border-white/20 border-t-[1px] bg-r border-b-[1px] h-[55px] w-[100%] bg-transparent flex items-start">
+    <div className="hidden relative border-white/20 border-t-[1px] bg-r border-b-[1px] h-[55px] w-[100%] bg-transparent md:flex items-start">
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px] md:border-l-[1px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px]"></div>
         <div className="h-[100%] w-[25%] border-white/20 border-r-[1px] "></div>

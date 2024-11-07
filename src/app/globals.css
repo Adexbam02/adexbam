@@ -91,12 +91,23 @@ body {
 }
 
 
-.progress-bar {
-  position: fixed;
-  top: 0;
+.gradient-fill {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-fill::before {
+  content: "";
+  position: absolute;
+  top: 100%;
   left: 0;
-  right: 0;
-  height: 10px;
-  background: var(--red);
-  transform-origin: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #7A87FB, #FFD49C);
+  transition: top 0.5s ease;
+  z-index: -1;
+}
+
+.gradient-fill:hover::before {
+  top: 0;
 }

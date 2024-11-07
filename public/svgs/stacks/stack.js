@@ -3,6 +3,9 @@ import HTML from './html5.svg';
 import Javascript from './javascript.svg';
 import Node from './nodejs.svg';
 import NPM from './npm.png';
+import react from './react.svg';
+import nextjs from './nextjs.svg';
+import tailwind from './tailwindcss.svg';
 import git from './git.svg';
 import github from './icons8-github.svg';
 import vscode from './vs-code.svg';
@@ -46,6 +49,18 @@ const stackk = [
     {
         id: 8,
         img: vscode
+    },
+    {
+        id: 9,
+        img: react
+    },
+    {
+        id: 10,
+        img: nextjs
+    },
+    {
+        id: 11,
+        img: tailwind
     },
 ]
 

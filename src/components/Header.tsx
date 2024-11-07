@@ -24,10 +24,28 @@ import { HorizontalBoxFour } from "@/ui/HorizontalBoxFour";
 export const Header = () => {
   const onHoverIn = () => {
     console.log("hoverIn");
+
+    const timeline = gsap.timeline();
+
+    timeline.to(
+      "#headBtn",
+      {
+        // background: "linear-gradient(to right, #7A87FB, #FFD49C)",
+        duration: 0.5,
+        // delay: 0.3
+      }
+    );
   };
 
   const onHoverOut = () => {
     console.log("hoverOut");
+
+    const timeline = gsap.timeline();
+
+    timeline.to(
+      "#headBtn",
+      {backgroundColor: "", duration: 0.5, delay: 0.3 }
+    );
   };
   // useEffect(() => {
   //   Observer.create({
