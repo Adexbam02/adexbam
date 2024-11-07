@@ -14,6 +14,7 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-to-r': 'linear-gradient(to right, #7A87FB, #FFD49C)',
+        'gradient-four': 'linear-gradient(to left, #96c93d, #00b09b)',
         // Add more gradients as needed
       }
     },

@@ -27,14 +27,11 @@ export const Header = () => {
 
     const timeline = gsap.timeline();
 
-    timeline.to(
-      "#headBtn",
-      {
-        // background: "linear-gradient(to right, #7A87FB, #FFD49C)",
-        duration: 0.5,
-        // delay: 0.3
-      }
-    );
+    timeline.to("#headBtn", {
+      // background: "linear-gradient(to right, #7A87FB, #FFD49C)",
+      duration: 0.5,
+      // delay: 0.3
+    });
   };
 
   const onHoverOut = () => {
@@ -42,28 +39,8 @@ export const Header = () => {
 
     const timeline = gsap.timeline();
 
-    timeline.to(
-      "#headBtn",
-      {backgroundColor: "", duration: 0.5, delay: 0.3 }
-    );
+    timeline.to("#headBtn", { backgroundColor: "", duration: 0.5, delay: 0.3 });
   };
-  // useEffect(() => {
-  //   Observer.create({
-  //     target: "#idd",
-  //     onHover: () => {
-
-  //     },
-  //   });
-  // }, []);
-
-  // useEffect(() => {
-  //   Observer.create({
-  //     target: "#idd",
-  //     onHover: () => {
-  //       console.log("hoverOut");
-  //     },
-  //   });
-  // }, []);
 
   useGSAP(() => {
     const timeline = gsap.timeline();
@@ -123,9 +100,9 @@ export const Header = () => {
           onMouseEnter={onHoverIn}
           onMouseLeave={onHoverOut}
           href="/contact"
-          className="opacity-0 font-medium bg-transparent gradientBorder 
+          className="opacity-0 font-medium hover:bg-gradient-to-r from-[#96c93d] to-[#00b09b] gradietBorder 
           transition-all duration-6000 ease-in-out 
-          box-borde rounded-[25px] border-[2px] text-white px-[35px] py-[10px] "
+          box-borde rounded-[25px] border-[2px] hover:border-transparent text-white px-[35px] py-[10px] "
         >
           Hire Me
         </Link>

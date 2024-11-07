@@ -171,7 +171,7 @@ export const Navbar = () => {
 
         <Link
           href="/contact"
-          className="hidden md:block font-medium bg-gradient-to-r from-[#7A87FB] to-[#FFD49C] text-black px-[35px] py-[10px] rounded-[25px] "
+          className="hidden md:block font-medium gradientFour text-white px-[35px] py-[10px] rounded-[25px] "
         >
           Hire Me
         </Link>
