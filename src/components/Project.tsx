@@ -32,7 +32,7 @@ export const Project = () => {
     <section className="mt-[3.3rem] px-[23px] md:px-[60px] lg:px-[9rem]">
       <div className="md:flex items-center justify-center">
         <div className="">
-          <Title title="Some Featured Projects" />
+          <Title title="Some Featured Projects" mb="mb-[1rem]" />
 
           <div className="flex flex-col items-start justify-normal gap-[1rem] sm:p-[20px] md:p-0 md:flex-wrap  lg:grid lg:grid-cols-3 lg:gap-4 ">
             {projects.map(({ id, img, title, context }) => (
@@ -84,7 +84,6 @@ export const Project = () => {
               </div>
             ))}
           </div>
-          <h1 id="id">Hover over me</h1>
         </div>
       </div>
     </section>

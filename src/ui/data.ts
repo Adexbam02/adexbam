@@ -11,7 +11,7 @@ export const process = [
   {
     id: 1,
     number: 1,
-    img: processOne,
+    img: processThree,
     title: "Step 1: Product design Research",
     content:
       "This initial step involves a systematic and thorough exploration of the market landscape, user needs, and existing solutions.",
@@ -20,7 +20,7 @@ export const process = [
   {
     id: 2,
     number: 2,
-    img: processTwo,
+    img: processThree,
     title: "Step 2: UI design in figma",
     content:
       "This initial step involves a systematic and thorough exploration of the market landscape, user needs, and existing solutions.",

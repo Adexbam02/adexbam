@@ -11,19 +11,65 @@ import { Title } from "@/ui/Title";
 import gsap from "gsap";
 import { Observer } from "gsap/Observer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(Observer); // Register the Observer plugin
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 export const Process = () => {
-  // ScrollTrigger.create({
-    
-  //   trigger: "#id",
-  //   start: "top top",
-  //   end: "bottom 50%+=100px",
-  //   onEnter: () => console.log('enter')
-  // });
+  // Heading Text animation
+  useEffect(() => {
+    gsap.fromTo(
+      "#headTe",
+      { opacity: 0, y: 0 },
+      {
+        opacity: 1,
+        y: -50,
+        duration: 1,
+        // delay: 1,
+        scrollTrigger: {
+          trigger: "#headTe",
+          start: "top 90%",
+          end: "bottom 60%",
+          scrub: true,
+          markers: false,
+        },
+      }
+    );
+  }, []);
 
+  useEffect(() => {
+    gsap.fromTo(
+      ".animate",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: ".animate",
+          start: "top 80%",
+          end: "bottom 80%",
+          scrub: true,
+          markers: true, // Remove this line in production
+        },
+      }
+    );
+  }, []);
+
+  
+
+  const getId = ({ idNumber }: { idNumber: number }) => {
+    if (idNumber === 2) {
+      const timeline = gsap.timeline();
+      timeline.to("#wokDone", { rotate: 20, duration: 1, delay: 1 });
+    }
+  };
+
+  // useGSAP(() => {
+  //   const timeline = gsap.timeline();
+
+  //   timeline.to("#wokDone", { rotate: 20, duration: 1, delay: 1 });
+  // });
   useEffect(() => {
     Observer.create({
       target: "#id",
@@ -40,8 +86,10 @@ export const Process = () => {
   return (
     <section className="mt-[3.3rem] px-[23px] flex items-center justfy-center md:px-[60px]  lg:px-[9rem]">
       <div className="md:flex items-start justify-center flex-col gap-2 md:w-[100%]">
-        <Title title="My Process to Design" />
-        <h1 id="id">Hover over me</h1>
+        <span id="headTe" className="mt-[1rem]">
+          <Title title="My Process to Design" mb="mb-[-2.3rem]" />
+        </span>
+
         <div
           id="#idd"
           className="flex flex-col items-start bg-reen-300 justify-center gap-[2rem] md:[100%]"
@@ -49,7 +97,7 @@ export const Process = () => {
           {process.map(({ id, number, img, title, content, link }) => (
             <div
               key={id}
-              className="flex items-start justify-between gap-4 bg-rd-500 md:w-[90%]"
+              className="animate flex items-start justify-between gap-4 bg-rd-500 md:w-[90%]"
             >
               <div className="flex flex-col items-center justify-center gap-2 bgblue-200">
                 <span className="text-[15px] lg:text-[20px] border-[1px] border-white rounded-full w-[35px] h-[35px] lg:w-[45px] lg:h-[45px] flex items-center justify-center">
@@ -60,11 +108,12 @@ export const Process = () => {
 
               <div className="flex flex-col items-start justify-center gap-4 bgred-500">
                 <Image
+                  id="workDone"
                   src={img}
                   width={30}
                   height={30}
                   alt=""
-                  className="lg:w-[40px] lg:h-[40px]"
+                  className="lg:w-[40px] lg:h-[40px] rotate-[85deg]"
                 />
 
                 <h3 className="text-[20px] lg:text-[25px] uppercase">
@@ -76,7 +125,7 @@ export const Process = () => {
                 </p>
 
                 <Link
-                  className="px-[15px] py-[7px] rounded-[25px] border-[0.4px] border-white hover:normalGradient hover:text-black ease-out transition-all transitin-colors duration-200"
+                  className="px-[15px] py-[7px] rounded-[25px] border-[0.4px] border-white hover:normalGradient text-white ease-out transition-all transitin-colors duration-200"
                   href={link}
                 >
                   See Examples

@@ -1,14 +1,48 @@
-import { Title } from "@/ui/Title";
+"use client";
+
 import Image from "next/image";
+
+import { Title } from "@/ui/Title";
 
 import mark from "../../public/svgs/mark.svg";
 import { testimonial } from "@/ui/data";
+
+import { useEffect } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export const Testimonial = () => {
+  // Heading Text animation
+  useEffect(() => {
+    gsap.fromTo(
+      "#headTex",
+      { opacity: 0, y: 0 },
+      {
+        opacity: 1,
+        y: -50,
+        duration: 1,
+        // delay: 1,
+        scrollTrigger: {
+          trigger: "#headTex",
+          start: "top 90%",
+          end: "bottom 60%",
+          scrub: true,
+          markers: false,
+        },
+      }
+    );
+  }, []);
+
   return (
     <section className="mt-[3.3rem] px-[23px] md:px-[60px]  lg:px-[9rem]">
       <div>
-        <Title title="Client Testimonials" />
-
+        <span id="headTex" className="mt-[1rem]">
+          <Title title="Client Testimonials" mb="mb-[1rem]" />
+        </span>
         <div className="-[15px] md:p-0 flex flex-col items-center justify-center gap-[1.5rem] md:gap-[.5rem] md:grid md:grid-cols-2">
           {testimonial.map(({ id, profile, name, title, context }) => (
             <div
