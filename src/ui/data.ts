@@ -10,6 +10,7 @@ import facebook from "../../public/svgs/facebook.svg"
 export const process = [
   {
     id: 1,
+    idd: "id",
     number: 1,
     img: processThree,
     title: "Step 1: Product design Research",
@@ -19,6 +20,7 @@ export const process = [
   },
   {
     id: 2,
+    idd: "id",
     number: 2,
     img: processThree,
     title: "Step 2: UI design in figma",
@@ -28,6 +30,7 @@ export const process = [
   },
   {
     id: 3,
+    idd: "id",
     number: 3,
     img: processThree,
     title: "Step 3: No-code develop in webflow",

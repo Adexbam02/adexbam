@@ -38,38 +38,66 @@ export const Process = () => {
     );
   }, []);
 
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     ".animate",
+  //     { opacity: 0, y: 50 },
+  //     {
+  //       opacity: 1,
+  //       y: 0,
+  //       scrollTrigger: {
+  //         trigger: ".animate",
+  //         start: "top 80%",
+  //         end: "bottom 80%",
+  //         scrub: true,
+  //         markers: true, // Remove this line in production
+  //       },
+  //     }
+  //   );
+  // }, []);
+
   useEffect(() => {
-    gsap.fromTo(
-      ".animate",
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: ".animate",
-          start: "top 80%",
-          end: "bottom 80%",
-          scrub: true,
-          markers: true, // Remove this line in production
-        },
-      }
-    );
+    gsap.utils.toArray(".animate").forEach((item) => {
+      gsap.fromTo(
+        item,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: item,
+            start: "top 90%",
+            end: "bottom 60%",
+            scrub: true,
+            markers: false,
+          },
+        }
+      );
+    });
   }, []);
 
-  
+  // gsap.to("workDone", {rotate: 90})
+  useEffect(() => {
+    const items = gsap.utils.toArray(".workDone").slice(1);
+    items.forEach((item) => {
+      gsap.fromTo(
+        item,
+        { rotation: 0 },
+        {
+          rotation: 180,
+          // y: 0,
+          scrollTrigger: {
+            trigger: item,
+            start: "top 90%",
+            end: "bottom 60%",
+            scrub: true,
+            markers: false,
+          },
+        }
+      );
+    });
+  }, []);
 
-  const getId = ({ idNumber }: { idNumber: number }) => {
-    if (idNumber === 2) {
-      const timeline = gsap.timeline();
-      timeline.to("#wokDone", { rotate: 20, duration: 1, delay: 1 });
-    }
-  };
-
-  // useGSAP(() => {
-  //   const timeline = gsap.timeline();
-
-  //   timeline.to("#wokDone", { rotate: 20, duration: 1, delay: 1 });
-  // });
   useEffect(() => {
     Observer.create({
       target: "#id",
@@ -113,7 +141,7 @@ export const Process = () => {
                   width={30}
                   height={30}
                   alt=""
-                  className="lg:w-[40px] lg:h-[40px] rotate-[85deg]"
+                  className="workDone lg:w-[40px] lg:h-[40px] rotate-[85deg]"
                 />
 
                 <h3 className="text-[20px] lg:text-[25px] uppercase">
