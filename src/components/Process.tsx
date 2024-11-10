@@ -16,6 +16,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(Observer); // Register the Observer plugin
 gsap.registerPlugin(ScrollTrigger);
 
+
 export const Process = () => {
   // Heading Text animation
   useEffect(() => {
@@ -79,19 +80,20 @@ export const Process = () => {
   // gsap.to("workDone", {rotate: 90})
   useEffect(() => {
     const items = gsap.utils.toArray(".workDone").slice(1);
-    items.forEach((item) => {
+    items.forEach((item, index) => {
+      const rotationValue = index === 2 ? 90 : 180;
+
       gsap.fromTo(
         item,
         { rotation: 0 },
         {
-          rotation: 180,
-          // y: 0,
+          rotation: rotationValue,
           scrollTrigger: {
             trigger: item,
             start: "top 90%",
             end: "bottom 60%",
             scrub: true,
-            markers: false,
+            markers: true,
           },
         }
       );
@@ -110,6 +112,8 @@ export const Process = () => {
       },
     });
   }, []);
+
+  
 
   return (
     <section className="mt-[3.3rem] px-[23px] flex items-center justfy-center md:px-[60px]  lg:px-[9rem]">
@@ -135,14 +139,16 @@ export const Process = () => {
               </div>
 
               <div className="flex flex-col items-start justify-center gap-4 bgred-500">
-                <Image
-                  id="workDone"
-                  src={img}
-                  width={30}
-                  height={30}
-                  alt=""
-                  className="workDone lg:w-[40px] lg:h-[40px] rotate-[85deg]"
-                />
+                <span className=" last:rotate-[90deg] last:bg-red-400">
+                  <Image
+                    id="workDone"
+                    src={img}
+                    width={30}
+                    height={30}
+                    alt=""
+                    className="workDone lg:w-[40px] lg:h-[40px] rotate-[85deg]"
+                  />
+                </span>
 
                 <h3 className="text-[20px] lg:text-[25px] uppercase">
                   {title}
