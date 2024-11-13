@@ -10,6 +10,8 @@ import home from "../../public/svgs/Home.svg";
 
 import { useState, useEffect } from "react";
 
+import { motion } from "framer-motion";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Observer } from "gsap/Observer";
@@ -34,7 +36,6 @@ export const Navbar = () => {
     });
   }, []);
 
-  
   const mouseHoverIn = () => {
     console.log("IN");
 
@@ -71,7 +72,9 @@ export const Navbar = () => {
     });
   };
 
-  const mouseHoverOutNavItems = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const mouseHoverOutNavItems = (
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
     const target = event.currentTarget;
     const timeline = gsap.timeline();
 
@@ -86,10 +89,6 @@ export const Navbar = () => {
       }
     });
   };
-
-
-
-  
 
   return (
     <nav className="p-[22.5px] fixd w-[100%] z-[100] md:px-[60px] lg:px-[9rem]">

@@ -81,24 +81,45 @@ export const Process = () => {
   useEffect(() => {
     const items = gsap.utils.toArray(".workDone").slice(1);
     items.forEach((item, index) => {
-      const rotationValue = index === 2 ? 90 : 180;
-
+      const rotationValue = index === 1 ? 265 : 180;
       gsap.fromTo(
         item,
-        { rotation: 0 },
+        { rotation: 0 }, 
         {
           rotation: rotationValue,
           scrollTrigger: {
             trigger: item,
             start: "top 90%",
             end: "bottom 60%",
+            // end: "bottom 20%",
             scrub: true,
-            markers: true,
+            // markers: true,
           },
         }
       );
     });
   }, []);
+
+  // useEffect(() => {
+  //   const items = gsap.utils.toArray(".workDone").slice(2); // Exclude the first and second items
+  //   items.forEach((item, index) => {
+  //     const rotationValue = index === 0 ? 90 : 180; // Adjust index to match the new array
+  //     gsap.fromTo(
+  //       item,
+  //       { rotation: 0 },
+  //       {
+  //         rotation: rotationValue,
+  //         scrollTrigger: {
+  //           trigger: item,
+  //           start: "top 90%",
+  //           end: "bottom 60%",
+  //           scrub: true,
+  //           markers: true,
+  //         },
+  //       }
+  //     );
+  //   });
+  // }, []);
 
   useEffect(() => {
     Observer.create({
