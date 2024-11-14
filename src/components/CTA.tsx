@@ -11,6 +11,14 @@ import { useState } from "react";
 //   message: string
 // }
 
+import { useEffect } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export const CTA = () => {
   const [display, setDisplay] = useState("hidden");
 
@@ -20,10 +28,24 @@ export const CTA = () => {
   // const { register, handleSubmit } = useForm<FormValues>()
   // const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data)
 
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     "#headTex",
+  //     { x: 50, opacity: 0.5 }, // Start from the left
+  //     { opacity: 1, x: 0, duration: 1, delay: 1 } // Animate to the normal position
+  //   );
+  // }, []);
+
+  gsap.to("#headTex", {x: 500})
+
   return (
     <section className="mt-[3.3rem] px-[23px] md:px-[60px] relative  lg:px-[9rem]">
       <div className="px-[22.3px] md:px-0  flex-col md:py-[3rem] md:ctaBg">
-        <Title title="Have Idea about Project?" mb="mb-[1rem]"/>
+        {/* <Title title="Have Idea about Project?" mb="mb-[1rem]" /> */}
+
+        <span id="headTx" className="mt-[rem]">
+          <Title title="Have Idea about Project?" mb="mb-[1rem]" />
+        </span>
 
         <div className="flex flex-col items-start justify-start gap-[1rem] md:iems-center md: ustify-center">
           <p className="md:max-w-[50%] md:text-cnter md:text-[px]">

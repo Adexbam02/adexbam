@@ -35,15 +35,37 @@ export const Testimonial = () => {
         },
       }
     );
+
+    gsap.fromTo(
+      "#testimonial",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: -30,
+        duration: 1,
+        // delay: 1,
+        scrollTrigger: {
+          trigger: "#testimonial",
+          start: "top 90%",
+          end: "bottom 70%",
+          scrub: true,
+          markers: false,
+        },
+      }
+    );
+    
   }, []);
 
   return (
     <section className="mt-[3.3rem] px-[23px] md:px-[60px]  lg:px-[9rem]">
       <div>
         <span id="headTex" className="mt-[1rem]">
-          <Title title="Client Testimonials" mb="mb-[1rem]" />
+          <Title title="Client Testimonials" mb="mb-[2.3rem]" />
         </span>
-        <div className="-[15px] md:p-0 flex flex-col items-center justify-center gap-[1.5rem] md:gap-[.5rem] md:grid md:grid-cols-2">
+        <div
+          id="testimonial"
+          className="-[15px] md:p-0 flex flex-col items-center justify-center gap-[1.5rem] md:gap-[.5rem] md:grid md:grid-cols-2"
+        >
           {testimonial.map(({ id, profile, name, title, context }) => (
             <div
               key={id}
