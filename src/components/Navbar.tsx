@@ -10,10 +10,10 @@ import home from "../../public/svgs/Home.svg";
 
 import { useState, useEffect } from "react";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
 import { Observer } from "gsap/Observer";
 
 gsap.registerPlugin(Observer);
