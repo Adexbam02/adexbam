@@ -12,7 +12,7 @@ import { Observer } from "gsap/Observer";
 
 gsap.registerPlugin(Observer);
 
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 import { HorizontalBoxOne } from "@/ui/HorizontalBoxOne";
 import { HorizontalBoxTwo } from "@/ui/HorizontalBoxTwo";
