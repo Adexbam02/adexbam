@@ -1,5 +1,3 @@
-import processOne from "../../public/svgs/first.svg";
-import processTwo from "../../public/svgs/second.svg";
 import processThree from "../../public/svgs/third.svg";
 import greatAspiration from "../../public/Great-Aspiration.png";
 import x from "../../public/svgs/x.svg"
