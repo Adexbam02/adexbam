@@ -16,7 +16,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(Observer); // Register the Observer plugin
 gsap.registerPlugin(ScrollTrigger);
 
-
 export const Process = () => {
   // Heading Text animation
   useEffect(() => {
@@ -58,7 +57,8 @@ export const Process = () => {
   // }, []);
 
   useEffect(() => {
-    gsap.utils.toArray(".animate").forEach((item) => {
+    const items = gsap.utils.toArray(".animate") as Element[];
+    items.forEach((item) => {
       gsap.fromTo(
         item,
         { opacity: 0, y: 50 },
@@ -79,12 +79,12 @@ export const Process = () => {
 
   // gsap.to("workDone", {rotate: 90})
   useEffect(() => {
-    const items = gsap.utils.toArray(".workDone").slice(1);
+    const items = gsap.utils.toArray(".workDone").slice(1) as Element[];
     items.forEach((item, index) => {
       const rotationValue = index === 1 ? 265 : 180;
       gsap.fromTo(
         item,
-        { rotation: 0 }, 
+        { rotation: 0 },
         {
           rotation: rotationValue,
           scrollTrigger: {
@@ -133,8 +133,6 @@ export const Process = () => {
       },
     });
   }, []);
-
-  
 
   return (
     <section className="mt-[3.3rem] px-[23px] flex items-center justfy-center md:px-[60px]  lg:px-[9rem]">
