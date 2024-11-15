@@ -6,18 +6,21 @@ import { Title } from "@/ui/Title";
 import click from "../../public/svgs/click.svg";
 import { projects } from "@/ui/data";
 
+import { useEffect } from "react";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger)
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Project = () => {
-  ScrollTrigger.create({
-    
-    trigger: "#id",
-    start: "top top",
-    end: "bottom 50%+=100px",
-    onEnter: () => console.log('enter')
-  });
+  // ScrollTrigger.create({
+  //   trigger: "#id",
+  //   start: "top top",
+  //   end: "bottom 50%+=100px",
+  //   onEnter: () => console.log("enter"),
+  // });
   const [hoveredId, setHoveredId] = useState(null);
 
   const handleHoverIn = (id) => {
@@ -28,12 +31,36 @@ export const Project = () => {
     setHoveredId(null);
   };
 
+  // Heading Text animation
+  useEffect(() => {
+    gsap.fromTo(
+      "#headTe",
+      { opacity: 0, y: 0 },
+      {
+        opacity: 1,
+        y: -50,
+        duration: 1,
+        // delay: 1,
+        scrollTrigger: {
+          trigger: "#headTex",
+          start: "top 50%",
+          end: "bottom 60%",
+          scrub: true,
+          markers: false,
+        },
+      }
+    );
+
+    
+  }, []);
+
   return (
     <section className="mt-[3.3rem] px-[23px] md:px-[60px] lg:px-[9rem]">
       <div className="md:flex items-center justify-center">
         <div className="">
-          <Title title="Some Featured Projects" mb="mb-[1rem]" />
-
+          <span id="headTe" className="mt-[1rem]">
+            <Title title="Some Featured Projects" mb="mb-[1rem]" />
+          </span>
           <div className="flex flex-col items-start justify-normal gap-[1rem] sm:p-[20px] md:p-0 md:flex-wrap  lg:grid lg:grid-cols-3 lg:gap-4 ">
             {projects.map(({ id, img, title, context }) => (
               <div

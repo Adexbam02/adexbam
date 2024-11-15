@@ -30,20 +30,32 @@ export const CTA = () => {
 
   // useEffect(() => {
   //   gsap.fromTo(
-  //     "#headTex",
-  //     { x: 50, opacity: 0.5 }, // Start from the left
-  //     { opacity: 1, x: 0, duration: 1, delay: 1 } // Animate to the normal position
+  //     "#headTe",
+  //     { opacity: 1, y: 0 },
+  //     {
+  //       opacity: 1,
+  //       y: 50,
+  //       duration: 1,
+  //       // delay: 1,
+  //       scrollTrigger: {
+  //         trigger: "#headTe",
+  //         start: "top 90%",
+  //         end: "bottom 60%",
+  //         scrub: true,
+  //         markers: true,
+  //       },
+  //     }
   //   );
   // }, []);
 
-  gsap.to("#headTex", {x: 500})
+  // gsap.to("#headTex", {x: 500})
 
   return (
     <section className="mt-[3.3rem] px-[23px] md:px-[60px] relative  lg:px-[9rem]">
       <div className="px-[22.3px] md:px-0  flex-col md:py-[3rem] md:ctaBg">
         {/* <Title title="Have Idea about Project?" mb="mb-[1rem]" /> */}
 
-        <span id="headTx" className="mt-[rem]">
+        <span id="headTe" className="mt-[rem]">
           <Title title="Have Idea about Project?" mb="mb-[1rem]" />
         </span>
 
