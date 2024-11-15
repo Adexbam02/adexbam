@@ -11,7 +11,7 @@ import { Title } from "@/ui/Title";
 import gsap from "gsap";
 import { Observer } from "gsap/Observer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(Observer); // Register the Observer plugin
 gsap.registerPlugin(ScrollTrigger);
