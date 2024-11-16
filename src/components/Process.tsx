@@ -17,6 +17,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(Observer); // Register the Observer plugin
 gsap.registerPlugin(ScrollTrigger);
 
+
 export const Process = () => {
   // Heading Text animation
 
@@ -60,10 +61,11 @@ export const Process = () => {
   // }, []);
 
   useGSAP(() => {
+    // const items = gsap.utils.toArray(".animate")
     const items = gsap.utils.toArray(".animate") as Element[];
     items.forEach((item) => {
-      gsap.fromTo(
-        item,
+      return gsap.fromTo(
+        item ,
         { opacity: 0, y: 50 },
         {
           opacity: 1,
