@@ -62,6 +62,25 @@ const stackk = [
         id: 11,
         img: tailwind
     },
+
+
+
+    {
+        id: 12,
+        img: vscode
+    },
+    {
+        id: 13,
+        img: react
+    },
+    {
+        id: 14,
+        img: nextjs
+    },
+    {
+        id: 15,
+        img: tailwind
+    },
 ]
 
 export default stackk
