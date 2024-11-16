@@ -8,7 +8,7 @@ import open from "../../public/svgs/open.svg";
 import close from "../../public/svgs/close.svg";
 import home from "../../public/svgs/Home.svg";
 
-import { useState} from "react";
+import { useState } from "react";
 
 // import { motion } from "framer-motion";
 
@@ -21,8 +21,8 @@ gsap.registerPlugin(Observer);
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-   // Instant opening and closing
-   useGSAP(() => {
+  // Instant opening and closing
+  useGSAP(() => {
     const timeline = gsap.timeline();
 
     timeline.fromTo(
@@ -37,8 +37,6 @@ export const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-
 
   const mouseHoverIn = () => {
     console.log("IN");
@@ -106,7 +104,7 @@ export const Navbar = () => {
           >
             <Image src={adexbam} width={30} height={30} alt="Adexbam" />
           </a>
-
+          <div className="relative"></div>
           <span
             id="dexbam"
             className="opacity-0 select-none hidden md:flex items-start justify-center flex-col gap-0"
