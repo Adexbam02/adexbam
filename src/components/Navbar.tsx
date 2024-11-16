@@ -8,12 +8,12 @@ import open from "../../public/svgs/open.svg";
 import close from "../../public/svgs/close.svg";
 import home from "../../public/svgs/Home.svg";
 
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
 // import { motion } from "framer-motion";
 
 import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import { Observer } from "gsap/Observer";
 
 gsap.registerPlugin(Observer);
@@ -21,20 +21,24 @@ gsap.registerPlugin(Observer);
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+   // Instant opening and closing
+   useGSAP(() => {
+    const timeline = gsap.timeline();
+
+    timeline.fromTo(
+      "#dexbam",
+      { opacity: 0, x: 0 },
+      { opacity: 1, x: 10, duration: 1.5, delay: 0.0 }
+    );
+
+    timeline.to("#dexbam", { opacity: 0, x: -15, duration: 1 });
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  useEffect(() => {
-    Observer.create({
-      // target: "#id",
-      // onHover: (self: Observer) => {
-      //   const target = self.target as HTMLAnchorElement;
-      //   const timeline = gsap.timeline();
-      //   timeline.to(target, { y: -6, duration: 0.5, delay: 0.5 });
-      // },
-    });
-  }, []);
+
 
   const mouseHoverIn = () => {
     console.log("IN");
