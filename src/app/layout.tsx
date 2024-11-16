@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
+import { Social } from "@/components/Social";
 // import localFont from 'next/font/local'
  
 // Font files can be colocated inside of `app`
@@ -41,7 +43,9 @@ export default function RootLayout({
       <body
         className={`${myFont.className}  antialiased`}
       >
+        <Navbar />
         {children}
+        <Social />
       </body>
     </html>
   );

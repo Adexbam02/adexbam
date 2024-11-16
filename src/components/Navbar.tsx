@@ -132,22 +132,23 @@ export const Navbar = () => {
         </div> */}
 
         <div className="hidden bg-[#1C1C1C] hover:bg-[#1C1C1E] md:flex items-center justify-center gap-[1.5rem] px-4 py-[0.3rem] rounded-[30px]">
-          <a
+          <Link
             href="#"
             className="bg-[#292929] px-[16px] py-[8px] rounded-[25px]"
           >
             <Image src={home} width={25} height={25} alt="Home" />
-          </a>
-          <a
-            href="/"
+          </Link>
+          <Link
+            href="/about"
             id="navItems"
             onMouseEnter={mouseHoverInNavItems}
             onMouseLeave={mouseHoverOutNavItems}
             className="opacity-"
           >
             About
-          </a>
-          <a
+          </Link>
+
+          <Link
             href="/"
             id="navItems"
             onMouseEnter={mouseHoverInNavItems}
@@ -155,8 +156,8 @@ export const Navbar = () => {
             className="opacity-"
           >
             Projects
-          </a>
-          <a
+          </Link>
+          <Link
             href="/"
             id="navItems"
             onMouseEnter={mouseHoverInNavItems}
@@ -164,7 +165,7 @@ export const Navbar = () => {
             className="opacity-"
           >
             Contact Me
-          </a>
+          </Link>
         </div>
 
         <div className="menu md:hidden">
