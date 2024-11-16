@@ -11,6 +11,7 @@ import { Title } from "@/ui/Title";
 import gsap from "gsap";
 import { Observer } from "gsap/Observer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 // import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(Observer); // Register the Observer plugin
@@ -18,7 +19,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Process = () => {
   // Heading Text animation
-  useEffect(() => {
+
+  useGSAP(() => {
     gsap.fromTo(
       "#headTe",
       { opacity: 0, y: 0 },
@@ -36,7 +38,8 @@ export const Process = () => {
         },
       }
     );
-  }, []);
+  });
+  // useEffect(() => {}, []);
 
   // useEffect(() => {
   //   gsap.fromTo(
@@ -56,7 +59,7 @@ export const Process = () => {
   //   );
   // }, []);
 
-  useEffect(() => {
+  useGSAP(() => {
     const items = gsap.utils.toArray(".animate") as Element[];
     items.forEach((item) => {
       gsap.fromTo(
@@ -76,6 +79,27 @@ export const Process = () => {
       );
     });
   }, []);
+
+  // useEffect(() => {
+  //   const items = gsap.utils.toArray(".animate") as Element[];
+  //   items.forEach((item) => {
+  //     gsap.fromTo(
+  //       item,
+  //       { opacity: 0, y: 50 },
+  //       {
+  //         opacity: 1,
+  //         y: 0,
+  //         scrollTrigger: {
+  //           trigger: item,
+  //           start: "top 90%",
+  //           end: "bottom 60%",
+  //           scrub: true,
+  //           markers: false,
+  //         },
+  //       }
+  //     );
+  //   });
+  // }, []);
 
   // gsap.to("workDone", {rotate: 90})
   useEffect(() => {
