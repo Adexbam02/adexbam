@@ -169,7 +169,7 @@ export const Process = () => {
 
         <div
           id="#idd"
-          className="flex flex-col items-start bg-reen-300 justify-center gap-[2rem] md:[100%]"
+          className="mt-[3rem] md:mt-0 flex flex-col items-start bg-reen-300 justify-center gap-[2rem] md:[100%]"
         >
           {process.map(({ id, number, img, title, content, link }) => (
             <div

@@ -83,7 +83,7 @@ export const Header = () => {
       <div className="bg-red200 mt-[1rem] md:mt-0 md:py-[6rem] flex flex-col px-[37px] py-[30px] items-center justify-center text-center h-[vh] md:h-[40vh]  g-red-400 gap-[.6rem]">
         <h1
           id="headText"
-          className="opacity-0 text-[35px] leading-none font-semibold lg:text-[45px]"
+          className="opacity-0 text-[35px]  leading-none font-semibold lg:text-[45px]"
         >
           I Design & Build Clean Websites!
         </h1>

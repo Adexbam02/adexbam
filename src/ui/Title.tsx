@@ -9,7 +9,7 @@ interface TitleProps {
 export const Title = ({ title, mb }: TitleProps) => {
   return (
     <div className={`title ${mb} flex items-start justify-start gap-1`}>
-      <h2 className="text-[25px] sm:text-[30px] font-medium lg:text-[35px]">
+      <h2 className="text-[30px] sm:text-[35px] font-medium lg:text-[40px]">
         {title}
       </h2>
       <Image
