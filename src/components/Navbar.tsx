@@ -116,6 +116,17 @@ export const Navbar = () => {
               the web dev.
             </p>
           </span>
+
+          {/* mobile */}
+          {/* <span
+            id="dexbamMobile"
+            className="opacity-0 select-none hidden md:flex items-start justify-center flex-col gap-0"
+          >
+            <h4 className="leading-none">AdeXBam</h4>
+            <p className="leading-none text-[12.3px] italic font-medium bg-gradient-to-r from-[#7A87FB] to-[#FFD49C] bg-clip-text text-transparent">
+              the web dev.
+            </p>
+          </span> */}
         </div>
         {/* <div className="logo flex justify-center items-center">
           <Image src={adexbam} width={30} height={30} alt="Adexbam" />
