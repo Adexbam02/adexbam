@@ -11,10 +11,9 @@ const myFont = localFont({
   display: "auto"
 })
 
-// const poppins = localFont({
-//   src: "./fonts/Poppins.woff",
-//   variable: "--font-poppins",
-//   weight: "100 900",
+// const glyphic = localFont({
+//   src: "./fonts/FacultyGlyphic-Regular.ttf",
+//   display: "auto",
 // })
 
 // const geistSans = localFont({
