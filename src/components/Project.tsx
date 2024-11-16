@@ -21,9 +21,9 @@ export const Project = () => {
   //   end: "bottom 50%+=100px",
   //   onEnter: () => console.log("enter"),
   // });
-  const [hoveredId, setHoveredId] = useState(null);
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
 
-  const handleHoverIn = (id) => {
+  const handleHoverIn = (id: number) => {
     setHoveredId(id);
   };
 
