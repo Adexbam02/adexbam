@@ -133,7 +133,7 @@ export const Navbar = () => {
 
         <div className="hidden bg-[#1C1C1C] hover:bg-[#1C1C1E] md:flex items-center justify-center gap-[1.5rem] px-4 py-[0.3rem] rounded-[30px]">
           <Link
-            href="#"
+            href="/"
             className="bg-[#292929] px-[16px] py-[8px] rounded-[25px]"
           >
             <Image src={home} width={25} height={25} alt="Home" />
