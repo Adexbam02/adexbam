@@ -7,6 +7,7 @@ import { Project } from "@/components/Project";
 // import { Social } from "@/components/Social";
 // import { TechWall } from "@/components/StackWall"
 import { Testimonial } from "@/components/Testimonial";
+import { AboutMe } from "@/components/AboutMe";
 
 
 
@@ -21,6 +22,7 @@ const Page = () => {
       {/* <TechWall /> */}
       <Process />
       <Project />
+      <AboutMe />
       <Testimonial />
       <CTA />
       {/* <Social /> */}
