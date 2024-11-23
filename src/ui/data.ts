@@ -86,15 +86,7 @@ export const testimonial = [
     title: "xcvbnm bnm",
     context:
       "s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the",
-  },
-  {
-    id: 4,
-    profile: greatAspiration,
-    name: "Nrad jhfnd",
-    title: "xcvbnm bnm",
-    context:
-      "s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the",
-  },
+  }
 ];
 
 

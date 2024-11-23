@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 
 import { useEffect } from "react";
 
@@ -12,9 +12,8 @@ import gsap from "gsap";
 import { Observer } from "gsap/Observer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-// import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(Observer); // Register the Observer plugin
+gsap.registerPlugin(Observer);
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -171,7 +170,7 @@ export const Process = () => {
           id="#idd"
           className="mt-[3rem] md:mt-0 flex flex-col items-start bg-reen-300 justify-center gap-[2rem] md:[100%]"
         >
-          {process.map(({ id, number, img, title, content, link }) => (
+          {process.map(({ id, number, img, title, content }) => (
             <div
               key={id}
               className="animate flex items-start justify-between gap-4 bg-rd-500 md:w-[90%]"
@@ -180,7 +179,7 @@ export const Process = () => {
                 <span className="text-[15px] lg:text-[20px] border-[1px] border-white rounded-full w-[35px] h-[35px] lg:w-[45px] lg:h-[45px] flex items-center justify-center">
                   {number}
                 </span>
-                <span className="h-[170px] w-[0.5px] bg-white"></span>
+                <span className="h-[120px] w-[0.5px] bg-white"></span>
               </div>
 
               <div className="flex flex-col items-start justify-center gap-4 bgred-500">
@@ -203,12 +202,12 @@ export const Process = () => {
                   {content}
                 </p>
 
-                <Link
+                {/* <Link
                   className="px-[15px] py-[7px] rounded-[25px] border-[0.4px] border-white hover:normalGradient text-white ease-out transition-all transitin-colors duration-200"
                   href={link}
                 >
                   See Examples
-                </Link>
+                </Link> */}
               </div>
             </div>
           ))}
